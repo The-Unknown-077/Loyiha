@@ -6,12 +6,13 @@ const Products = ({ data }) => {
 
   return (
     <>
-      <div className='p-[50px] grid grid-cols-5 gap-3'>
+      <h1 className='text-center text-xl font-bold text-[40px] text-[#3A3A3A]'>Our Products</h1>
+      <div className='p-[50px] grid grid-cols-5 gap-3'>  
         {
           data?.map((products) => (
             <div key={products.id}>
               <div>
-                <div className='bg-[#f5f5f5]'>
+                <div className='bg-[#f5f5f5] border-b border-gray-300'>
                   <img className='cursor-pointer w-full h-full object-cover' onClick={() => navigate(`/product/${products.id}`)} src={products.thumbnail} alt="" />
                 </div>
                 <div className='w-[100%] h-[100px] bg-[#f4f5f7] p-[10px]'>
