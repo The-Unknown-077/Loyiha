@@ -5,7 +5,7 @@ import Skleton from "../../components/products/Skleton"
 import { useFetch } from "../../hooks/useFetch"
 
 const Home = () => {
-  const { data, error, loading } = useFetch("/products", { limit: 10, })
+  const { data, error, loading } = useFetch("/products", { limit: 8, })
   return (
     <div>
       <Hero />
