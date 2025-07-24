@@ -3,6 +3,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotFound from "./pages/not-found/NotFound";
 import Layout from "./pages/layout/Layout";
 import DetailProduct from "./pages/detail-product/DetailProduct";
+import Contact from "./pages/contact/Contact";
+import Cart from "./pages/cart/Cart";
+import Wishlist from "./pages/wishlist/Wishlist";
+
 
 const App = () => {
   return (
@@ -11,6 +15,9 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index={true} element={<Home />} />
           <Route path="/product/:id" element={<DetailProduct />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/wishlist" element={<Wishlist />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
