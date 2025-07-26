@@ -13,7 +13,7 @@ const Home = () => {
       {
         error && <p>something went weong :(</p>
       }
-      {loading ? <Skleton/> : <Products data={data.products} />}
+      {loading ? <Skleton/> : <Products data={data.products} text="Our products" />}
     </div>
   )
 }
