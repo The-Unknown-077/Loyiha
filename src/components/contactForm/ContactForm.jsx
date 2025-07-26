@@ -13,7 +13,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <form className='header_container mt-[50px] mb-[50px]'>
+      <form className='container mt-[50px] mb-[50px]'>
         <h1 className='text-[42px] font-[600]'>Billing details</h1>
         <div className='flex flex-col lg:flex-row gap-[30px] mt-[15px]'>
           <div className='mb-[10px] w-full lg:w-[211px]'>
