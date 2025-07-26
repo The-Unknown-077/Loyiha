@@ -126,10 +126,13 @@ const ContactForm = () => {
           />
         </div>
 
-        <button type='submit' className='w-[453px] h-[75px] border rounded-[10px] bg-[#B88E2F] text-white cursor-pointer'>Submit</button>
+        <button type='submit' className='w-[453px] h-[75px] border rounded-[10px] bg-[#B88E2F] text-white cursor-pointer'>
+          Submit
+        </button>
       </form>
     </>
   )
 }
 
 export default ContactForm
+
