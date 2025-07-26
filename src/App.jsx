@@ -6,6 +6,9 @@ import DetailProduct from "./pages/detail-product/DetailProduct";
 import Contact from "./pages/contact/Contact";
 import Cart from "./pages/cart/Cart";
 import Wishlist from "./pages/wishlist/Wishlist";
+import Blog from "./pages/blog/Blog";
+import Checkout from "./pages/checkout/Checkout";
+import Shop from "./pages/shop/Shop";
 
 
 const App = () => {
@@ -18,6 +21,9 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/shop" element={<Shop />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
