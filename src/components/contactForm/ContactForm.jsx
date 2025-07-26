@@ -125,6 +125,8 @@ const ContactForm = () => {
             className='w-full h-[75px] pl-[10px] border-[2px] border-[#aaa] rounded-[10px] mt-[10px]'
           />
         </div>
+
+        <button type='submit' className='w-[453px] h-[75px] border rounded-[10px] bg-[#B88E2F] text-white cursor-pointer'>Submit</button>
       </form>
     </>
   )
