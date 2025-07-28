@@ -8,6 +8,10 @@ const CartDetail = () => {
     const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)
 
     const navigate = useNavigate()
+    const handleClick = () => {
+        navigate("/checkout");
+    };
+
 
     // {totalPrice.toFixed(2)}
 
@@ -30,7 +34,7 @@ const CartDetail = () => {
                                             <div className="w-[105px] h-[105px] bg-[#efe6d1] rounded-[10px] flex items-center justify-center overflow-hidden shrink-0">
                                                 <img
                                                     src={item.thumbnail}
-                                                    onClick={()=> navigate(`/products/${item.id}`)}
+                                                    onClick={() => navigate(`/products/${item.id}`)}
                                                     alt="product_img"
                                                     className="max-w-full max-h-full cursor-pointer size-[105px] object-contain"
                                                 />
@@ -67,7 +71,7 @@ const CartDetail = () => {
                             <p className='font-medium text-[16px]'>Total: </p>
                             <p className='font-medium text-[20px] text-[#B88E2F]'>Rs. {totalPrice.toFixed(2)}</p>
                         </div>
-                        <button className='text-center w-full py-[14px] px-[58px] border-[1px] rounded-[15px] font-normal text-[20px] hover:bg-[#B88E2F] hover:text-[#fff] duration-300'>Check Out</button>
+                        <button onClick={handleClick} className='text-center w-full py-[14px] px-[58px] border-[1px] rounded-[15px] font-normal text-[20px] hover:bg-[#B88E2F] hover:text-[#fff] duration-300'>Check Out</button>
                     </div>
                 </div>
             </div>
