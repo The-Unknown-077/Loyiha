@@ -38,7 +38,7 @@ const Footer = () => {
 
         <div>
           <h3 className="text-[#9f9f9f] font-medium text-[16px] mb-6">Newsletter</h3>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-2">
+          <div className="flex flex-col lg:flex-row gap-4 sm:gap-2">
             <input
               type="email"
               placeholder="Enter Your Email Address"
