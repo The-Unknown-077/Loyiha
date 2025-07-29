@@ -33,15 +33,15 @@ const CheckoutForm = () => {
 
     const message = `
         Yangi buyurtma:
-        Ism: ${fName}
-        Familiya: ${lName}
-        Kompaniya: ${cName || 'Kiritilmagan'}
-        Mamlakat: ${country}
-        Manzil: ${street}
-        Shahar: ${town}
-        ZIP: ${zip}
-        Telefon: ${phone}
-        Email: ${email}
+      Ism: ${fName}
+      Familiya: ${lName}
+      Kompaniya: ${cName || 'Kiritilmagan'}
+      Mamlakat: ${country}
+      Manzil: ${street}
+      Shahar: ${town}
+      ZIP: ${zip}
+      Telefon: ${phone}
+      Email: ${email}
     `;
 
     sendTelegramMessage(message);
