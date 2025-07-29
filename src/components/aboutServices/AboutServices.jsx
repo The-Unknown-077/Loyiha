@@ -7,9 +7,9 @@ import img4 from "./images/customer-support.svg"
 
 const AboutServices = () => {
   return (
-    <section className='bg-[#faf3ea] h-[270px] flex items-center justify-center'>
+    <section className='bg-[#faf3ea] h-[270px] flex items-center justify-center max-lg:h-auto max-lg:py-[52px] max-lg:mx-auto'>
         <div className="header_container">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[55px] place-items-center h-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[55px] place-items-center h-full max-lg:mx-auto max-lg:items-center">
                 <div className="flex justify-center items-center gap-[10px]">
                     <img src={img1} alt="" />
                     <div className="">
