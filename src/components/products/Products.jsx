@@ -16,7 +16,7 @@ const Products = ({ data, text, limit, setLimit }) => {
 
   return (
     <section className='flex justify-center items-center flex-col'>
-      <h1 className='text-center text-xl font-bold text-[40px] text-[#3A3A3A]'>{text ? text : ""}</h1>
+      <h1 className='text-center text-xl font-bold text-[40px] text-[#3A3A3A] pt-[60px]'>{text ? text : ""}</h1>
       <div className='p-[50px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 container'>
         {
           data?.map((products) => (
