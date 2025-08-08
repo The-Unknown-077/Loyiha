@@ -24,8 +24,8 @@ const App = () => {
           <Route path="/blog" element={<Blog />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/shop" element={<Shop />} />
-          <Route path="*" element={<NotFound />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

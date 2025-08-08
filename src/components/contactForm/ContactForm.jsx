@@ -44,7 +44,7 @@ const ContactForm = () => {
         </p>
       </div>
 
-      <div className='header_container flex flex-col lg:flex-row gap-10 justify-around items-center'>
+      <div className='flex flex-col lg:flex-row gap-10 justify-around items-center'>
         {/* Chap tomon */}
         <div>
           <div className='flex gap-3 mb-[15px]'>
@@ -82,7 +82,7 @@ const ContactForm = () => {
 
         {/* Form tomoni */}
         <div>
-          <form onSubmit={handleSubmit} className='flex flex-col items-start'>
+          <form onSubmit={handleSubmit} className='flex flex-col items-start w-full container'>
             <label htmlFor="name">Your Name</label>
             <input
               name='name'
