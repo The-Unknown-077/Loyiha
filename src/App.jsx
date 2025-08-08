@@ -19,14 +19,14 @@ const App = () => {
       <Suspense fallback={<SiteLoading />}>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route index={true} element={<Home />} />
-            <Route path="/product/:id" element={<DetailProduct />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/wishlist" element={<Wishlist />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/shop" element={<Shop />} />
+            <Route index element={<Home />} />
+            <Route path="product/:id" element={<DetailProduct />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="wishlist" element={<Wishlist />} />
+            <Route path="blog" element={<Blog />} />
+            <Route path="checkout" element={<Checkout />} />
+            <Route path="shop" element={<Shop />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
