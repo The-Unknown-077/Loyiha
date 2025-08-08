@@ -50,14 +50,14 @@ const Header = () => {
           </li>
           <li>
             <NavLink
-              to="/about"
+              to="/blog"
               className={({ isActive }) =>
                 isActive
                   ? "text-[#B88E2F] font-medium text-[15px] xl:text-[16px] border-b-[2px] border-[#B88E2F] pb-[2px]"
                   : "font-medium text-[15px] xl:text-[16px] duration-300 hover:scale-105"
               }
             >
-              About
+              Blog
             </NavLink>
           </li>
           <li>
