@@ -18,7 +18,7 @@ const CartDetail = () => {
     return (
         <section className=''>
             <div className="container">
-                <div className="flex justify-between gap-[30px]">
+                <div className="flex justify-between gap-[30px] relative">
                     <div className="flex-2 w-[817px h-[55px]]">
                         <div className="bg-[#f9f1e7] w-full h-[55px] mb-[35px] flex justify-between items-center px-[62px]">
                             <p className='font-medium text-[16px]'>Product</p>
@@ -26,7 +26,7 @@ const CartDetail = () => {
                             <p className='font-medium text-[16px]'>Quantity</p>
                             <p className='font-medium text-[16px]'>Subtotal</p>
                         </div>
-                        <div className="w-full h-[256px] overflow-y-scroll">
+                        <div className="w-full h-auto">
                             {
                                 cart.map((item) => (
                                     <div key={item.id} className="flex justify-between h-[105px] items-center mb-[12px] w-full">
@@ -61,7 +61,7 @@ const CartDetail = () => {
                             }
                         </div>
                     </div>
-                    <div className="size-[390px] bg-[#f9f1e7] px-[75px] mx-auto">
+                    <div className="size-[390px] bg-[#f9f1e7] px-[75px] mx-auto sticky top-[10px] left-0">
                         <h2 className='font-bold text-[32px] mb-[61px] mt-[15px] text-center'>Cart Totals</h2>
                         <div className="flex justify-between items-center mb-[31px]">
                             <p className='font-medium text-[16px]'>Subtotal: </p>
