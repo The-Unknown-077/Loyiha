@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
+import { useCart } from '../../zustand/useCart';
+import { Navigate } from 'react-router-dom';
 
 const CheckoutForm = () => {
+  const { cart } = useCart()
+  if (!cart.length) {
+    return <Navigate replace to={'/cart'} />
+  }
   const [fName, setFName] = useState('');
   const [lName, setLName] = useState('');
   const [cName, setCName] = useState('');
@@ -57,7 +63,7 @@ const CheckoutForm = () => {
 
   return (
     <div className="flex flex-col lg:flex-row container mx-auto px-4 gap-8">
-      
+
       {/* FORM */}
       <form
         className="w-full lg:w-2/3 mt-10 mb-10"
@@ -121,18 +127,34 @@ const CheckoutForm = () => {
 
       {/* ORDER SUMMARY */}
       <div className="w-full lg:w-1/3 mt-5 lg:mt-[100px]">
-        <div className="sticky top-[25  0px] mb-[120px] bg-white shadow-md p-5 rounded-lg">
+        <div className="sticky top-[50px] mb-[120px] bg-white shadow-md p-5 rounded-lg">
           <div className="flex justify-between items-center border-b border-gray-300 pb-5">
             <div className="flex flex-col gap-3">
               <h3 className="text-lg md:text-xl font-medium">Product</h3>
+              {
+                cart?.map(item => (
+                  <p key={item.id}>
+                    <span>{item.title}</span>
+                  </p>
+                ))
+              }
               <p>Subtotal</p>
               <p>Total</p>
             </div>
             <div className="flex flex-col gap-3">
               <h3 className="text-lg md:text-xl font-medium">Rs</h3>
-              <p>Rs. </p>
-              <p>Rs. </p>
-              <h2 className="text-lg md:text-xl text-[#B88E2F] font-bold">Rs.</h2>
+              <p>Rs.
+                {
+                  cart?.map(item => (
+                    <p key={item.id}>
+                      <span>{item.price}</span>
+                    </p>
+                  ))
+                }
+              </p>
+              <h2 className='text-[24px] text-[#B88E2F] font-bold'>Rs.
+                {cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2)}
+              </h2>
             </div>
           </div>
 
