@@ -12,8 +12,8 @@ const CheckoutForm = () => {
   const [email, setEmail] = useState('');
 
   const sendTelegramMessage = (message) => {
-    const botToken = '7915987730:AAGdULsP4M6JpK4NX7Uv9QxWLSa4GEGITAs';
-    const chatId = '-1002766637232';
+    const botToken = 'BOT_TOKENING';
+    const chatId = 'CHAT_IDING';
     const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
     fetch(url, {
@@ -56,7 +56,8 @@ const CheckoutForm = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row container px-4 gap-8">
+    <div className="flex flex-col lg:flex-row container mx-auto px-4 gap-8">
+      
       {/* FORM */}
       <form
         className="w-full lg:w-2/3 mt-10 mb-10"
@@ -119,52 +120,55 @@ const CheckoutForm = () => {
       </form>
 
       {/* ORDER SUMMARY */}
-      <div className="w-full lg:w-1/3 flex flex-col  p-5 rounded-lg mt-5 lg:mt-[100px]">
-        <div className="flex justify-between items-center border-b border-gray-300 pb-5">
-          <div className="flex flex-col gap-3">
-            <h3 className="text-lg md:text-xl font-medium">Product</h3>
-            <p>Subtotal</p>
-            <p>Total</p>
+      <div className="w-full lg:w-1/3 mt-5 lg:mt-[100px]">
+        <div className="sticky top-[25  0px] mb-[120px] bg-white shadow-md p-5 rounded-lg">
+          <div className="flex justify-between items-center border-b border-gray-300 pb-5">
+            <div className="flex flex-col gap-3">
+              <h3 className="text-lg md:text-xl font-medium">Product</h3>
+              <p>Subtotal</p>
+              <p>Total</p>
+            </div>
+            <div className="flex flex-col gap-3">
+              <h3 className="text-lg md:text-xl font-medium">Rs</h3>
+              <p>Rs. </p>
+              <p>Rs. </p>
+              <h2 className="text-lg md:text-xl text-[#B88E2F] font-bold">Rs.</h2>
+            </div>
           </div>
-          <div className="flex flex-col gap-3">
-            <h3 className="text-lg md:text-xl font-medium">Rs</h3>
-            <p>Rs. </p>
-            <p>Rs. </p>
-            <h2 className="text-lg md:text-xl text-[#B88E2F] font-bold">Rs.</h2>
-          </div>
-        </div>
 
-        <div className="py-4">
-          <div className="flex gap-2">
-            <input type="radio" name="paymentMethod" id="bank1" />
-            <label htmlFor="bank1">Direct Bank Transfer</label>
+          <div className="py-4">
+            <div className="flex gap-2">
+              <input type="radio" name="paymentMethod" id="bank1" />
+              <label htmlFor="bank1">Direct Bank Transfer</label>
+            </div>
+            <p className="text-gray-500 text-sm">
+              Make your payment directly into our bank account...
+            </p>
           </div>
-          <p className="text-gray-500 text-sm">
-            Make your payment directly into our bank account...
+
+          <div className="py-4">
+            <div className="flex gap-2">
+              <input type="radio" name="paymentMethod" id="bank2" />
+              <label htmlFor="bank2">Direct Bank Transfer</label>
+            </div>
+            <div className="flex gap-2 mt-2">
+              <input type="radio" name="paymentMethod" id="cod" />
+              <label htmlFor="cod">Cash On Delivery</label>
+            </div>
+          </div>
+
+          <p className="text-sm">
+            Your personal data will be used to support your experience...
           </p>
+
+          <button className="w-[100%] py-3 px-10 border rounded-lg mt-5 hover:bg-black hover:text-white">
+            Place order
+          </button>
         </div>
-
-        <div className="py-4">
-          <div className="flex gap-2">
-            <input type="radio" name="paymentMethod" id="bank2" />
-            <label htmlFor="bank2">Direct Bank Transfer</label>
-          </div>
-          <div className="flex gap-2 mt-2">
-            <input type="radio" name="paymentMethod" id="cod" />
-            <label htmlFor="cod">Cash On Delivery</label>
-          </div>
-        </div>
-
-        <p className="text-sm">
-          Your personal data will be used to support your experience...
-        </p>
-
-        <button className="py-3 px-10 border rounded-lg mt-5 hover:bg-black hover:text-white">
-          Place order
-        </button>
       </div>
     </div>
   );
 };
 
 export default CheckoutForm;
+
